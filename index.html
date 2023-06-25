@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--page title-->
+    <title>Password Generator</title>
+
+    <!--page description-->
+    <meta name="description" content="A random password generator." />
+
+    <!--character encoding-->
+    <meta charset="utf-8" />
+
+    <!--device width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Open Graph tags-->
+    <meta property="og:title" content="Password Generator" />
+    <meta property="og:description" content="A random password generator." />
+    <meta property="og:image" content="img/og-image.jpg" />
+
+    <!--Twitter cards-->
+    <meta name="twitter:title" content="Password Generator" />
+
+    <!--stylesheets-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="./js/includeLocal.js"></script>
+    <script defer>
+      window.jQuery || includeLocalJS("jquery-3.6.0.min.js");
+    </script>
+    <script defer>
+      window.bootstrap ||
+        (includeLocalCSS("bootstrap.min.css") &&
+          includeLocalJS("bootstrap.min.js"));
+    </script>
+    <script defer>
+      window.Popper || includeLocalJS("popper.min.js");
+    </script>
+    <!-- data-main attribute tells require.js to load ./js/series.js after require.js loads. -->
+    <script data-main="./js/scripts" src="./js/vendor/require.js"></script>
+  </head>
+
+  <body>
+    <main class="container h-auto m-0 min-vh-100">
+      <h1>Password Generator</h1>
+
+      <p>A random password generator.</p>
+
+      <!-- Copyright -->
+      <div
+        id="copyright"
+        class="bottom center position-absolute bottom-0 start-50 translate-middle"
+      >
+        &copy Sherpad Ndabambi <span id="footerYear"></span>
+      </div>
+    </main>
+  </body>
+</html>
