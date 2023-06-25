@@ -50,9 +50,93 @@
 
   <body>
     <main class="container h-auto m-0 min-vh-100">
-      <h1>Password Generator</h1>
+      <h1 class="text-center">Password Generator</h1>
 
-      <p>A random password generator.</p>
+      <p class="mb-5 text-center">Generate random passwords.</p>
+
+      <form>
+        <div class="num-characters">
+          <div class="input-group mb-2">
+            <span class="input-group-text">Minimum no. of characters</span>
+            <input type="number" class="form-control" value="12" />
+          </div>
+        </div>
+
+        <div class="num-characters">
+          <div class="input-group mb-2">
+            <span class="input-group-text">Maximum no. of characters</span>
+            <input type="number" class="form-control" value="24" />
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-header">Password must contain:</div>
+          <div class="card-body text-start">
+            <ul class="list-group list-group-flush">
+              <li class="list-group">
+                <div class="form-check">
+                  <input
+                    checked
+                    class="form-check-input"
+                    id="upperCaseLetters"
+                    type="checkbox"
+                  />
+                  <label class="form-check-label" for="upperCaseLetters">
+                    Uppercase letters (A-Z)
+                  </label>
+                </div>
+              </li>
+
+              <div class="form-check">
+                <input
+                  checked
+                  class="form-check-input"
+                  id="lowerCaseLetters"
+                  type="checkbox"
+                />
+                <label class="form-check-label" for="lowerCaseLetters">
+                  Lowercase letters (a-z)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  checked
+                  class="form-check-input"
+                  id="digits"
+                  type="checkbox"
+                />
+                <label class="form-check-label" for="digits">
+                  Digits (0-9)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  checked
+                  class="form-check-input"
+                  id="specialCharacters"
+                  type="checkbox"
+                />
+                <label class="form-check-label" for="specialCharacters">
+                  Special characters (`~!@#$%^&*()-_=+[]{}\|;:'",<>./?)
+                </label>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-4 text-center">
+          <button class="btn btn-success">Generate</button>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="input-group w-75">
+            <input class="form-control" disabled id="password" type="text" />
+            <button class="btn btn-info" onclick="copyPassword();">Copy</button>
+          </div>
+        </div>
+      </form>
 
       <!-- Copyright -->
       <div
