@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog][Keep a Changelog url], and this projec
 
 ## [Unreleased]
 
+## [1.0.0] Initial Release
+
 <!-- References -->
 
 [Keep a Changelog url]: https://keepachangelog.com/en/1.0.0/
