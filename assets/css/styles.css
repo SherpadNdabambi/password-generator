@@ -11,6 +11,10 @@ form {
   max-width: 500px;
 }
 
+img {
+  width: 128px;
+}
+
 .num-characters {
   width: 300px;
 }
