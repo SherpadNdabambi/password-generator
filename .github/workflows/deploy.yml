@@ -23,9 +23,10 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: |
-          tsc --project .
-          ls -la dist/ || echo "dist/ not found"
+        run: npm run build
+
+      - name: Add Dist Files
+        run: git add -f dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
