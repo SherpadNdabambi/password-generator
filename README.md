@@ -124,8 +124,8 @@ See the changelog [here][changelog url].
 
 Sherpad Ndabambi
 
-<span title="Personal website">[<img alt="Website icon" src="./img/website-ui-web-svgrepo-com.svg" style="height: 32px">][Personal website url]</span>
-<span title="Email">[<img alt="Gmail icon" src="./img/gmail-old-svgrepo-com.svg" style="height: 32px">][Email address]<span>
+<span title="Personal website">[<img alt="Website icon" src="./assets/img/website-ui-web-svgrepo-com.svg" style="height: 32px">][Personal website url]</span>
+<span title="Email">[<img alt="Gmail icon" src="./assets/img/gmail-old-svgrepo-com.svg" style="height: 32px">][Email address]<span>
 
 <div align=right>
 
@@ -163,9 +163,9 @@ Distributed under the DBAD License. See [LICENSE][License url] for more informat
 [Issues url]: https://github.com/sherpadNdabambi/password-generator/issues
 [DBAD License shield url]: https://img.shields.io/badge/license-DBAD-blue?style=flat
 [License url]: ./LICENSE
-[Logo url]: ./img/user-password-svgrepo-com.png
+[Logo url]: ./assets/img/user-password-svgrepo-com.png
 [Repo url]: https://github.com/SherpadNdabambi/password-generator/
-[Password Generator screenshot url]: ./img/og-image.png
+[Password Generator screenshot url]: ./assets/img/og-image.png
 [Password Generator url]: https://github.com/sherpadNdabambi/password-generator/
 [Bootstrap shield url]: https://img.shields.io/badge/Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white
 [HTML5 shield url]: https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white
@@ -186,10 +186,10 @@ Distributed under the DBAD License. See [LICENSE][License url] for more informat
 [Email address]: mailto:sgndabambi@gmail.com
 [Document Clean SVG vector url]: https://www.svgrepo.com/svg/304309/user-password
 [Bootstrap Blog url]: https://blog.getbootstrap.com/
-[Website icon url]: ./img/website-icon.png
+[Website icon url]: ./assets/img/website-icon.png
 [Website SVG vector url]: https://www.svgrepo.com/svg/415803/website-ui-web
 [SVG Repo url]: https://www.svgrepo.com/
-[Gmail icon url]: ./img/gmail-icon.png
+[Gmail icon url]: ./assets/img/gmail-icon.png
 [Gmail SVG vector url]: https://www.svgrepo.com/svg/349379/gmail-old
 [TinyPNG url]: https://tinypng.com/
 [Best-README-Template url]: https://github.com/othneildrew/Best-README-Template
