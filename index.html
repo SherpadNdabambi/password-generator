@@ -136,7 +136,11 @@
         </div>
 
         <div class="mb-4 text-center">
-          <button class="btn btn-success" onclick="generatePassword()">
+          <button
+            type="button"
+            class="btn btn-success"
+            onclick="generatePassword()"
+          >
             Generate
           </button>
         </div>
@@ -144,7 +148,13 @@
         <div class="row justify-content-center mb-3 output">
           <div class="input-group w-75">
             <input class="form-control" disabled id="password" type="text" />
-            <button class="btn btn-info" onclick="copyPassword();">Copy</button>
+            <button
+              type="button"
+              class="btn btn-info"
+              onclick="copyPassword();"
+            >
+              Copy
+            </button>
           </div>
         </div>
 

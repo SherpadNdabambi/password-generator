@@ -3,28 +3,25 @@ window.onload = () => {
 };
 
 function copyPassword() {
-  const password = document.querySelector("#password"),
+  const password = document.querySelector("#password") as HTMLInputElement,
     range = document.createRange();
 
-  range.selectNode(password);
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(range);
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges();
-  document.querySelector("#confirmation").classList.add("alert-success");
-  document.querySelector("#confirmation").innerHTML = "Copied to clipboard";
-  setTimeout(() => {
-    document.querySelector("#confirmation").innerHTML = "";
-    document.querySelector("#confirmation").classList.remove("alert-success");
-  }, 1000);
+  navigator.clipboard.writeText(password.value.trim()).then(() => {
+    document.querySelector("#confirmation").classList.add("alert-success");
+    document.querySelector("#confirmation").innerHTML = "Copied to clipboard";
+    setTimeout(() => {
+      document.querySelector("#confirmation").innerHTML = "";
+      document.querySelector("#confirmation").classList.remove("alert-success");
+    }, 1000);
+  });
 }
 
 function generatePassword() {
   const minPasswordLength = parseInt(
-      document.querySelector("#minPasswordLength").value
+      (document.querySelector("#minPasswordLength") as HTMLInputElement).value
     ),
     maxPasswordLength = parseInt(
-      document.querySelector("#maxPasswordLength").value
+      (document.querySelector("#maxPasswordLength") as HTMLInputElement).value
     ),
     passwordLength =
       Math.floor(Math.random() * (maxPasswordLength - minPasswordLength)) +
@@ -33,7 +30,9 @@ function generatePassword() {
 
   let password = "";
 
-  if (document.querySelector("#upperCaseLetters").checked) {
+  if (
+    (document.querySelector("#upperCaseLetters") as HTMLInputElement).checked
+  ) {
     const upperCaseLetters = Array.from(Array(26).keys())
       .map((element) => element + 65)
       .map((element) => String.fromCharCode(element));
@@ -41,7 +40,9 @@ function generatePassword() {
     upperCaseLetters.forEach((character) => possibleCharacters.push(character));
   }
 
-  if (document.querySelector("#lowerCaseLetters").checked) {
+  if (
+    (document.querySelector("#lowerCaseLetters") as HTMLInputElement).checked
+  ) {
     const lowerCaseLetters = Array.from(Array(26).keys())
       .map((element) => element + 97)
       .map((element) => String.fromCharCode(element));
@@ -49,12 +50,14 @@ function generatePassword() {
     lowerCaseLetters.forEach((character) => possibleCharacters.push(character));
   }
 
-  if (document.querySelector("#digits").checked)
+  if ((document.querySelector("#digits") as HTMLInputElement).checked)
     Array.from(Array(10).keys()).forEach((digit) =>
       possibleCharacters.push(digit)
     );
 
-  if (document.querySelector("#specialCharacters").checked)
+  if (
+    (document.querySelector("#specialCharacters") as HTMLInputElement).checked
+  )
     [
       "`",
       "~",
@@ -97,7 +100,7 @@ function generatePassword() {
     password += character;
   }
 
-  document.querySelector("#password").value = password;
+  (document.querySelector("#password") as HTMLInputElement).value = password;
 }
 
 function setFooterYear() {
