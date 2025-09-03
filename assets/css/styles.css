@@ -1,0 +1,20 @@
+.container-fluid {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.num-characters {
+  width: 300px;
+}
+
+.output {
+  width: 600px;
+}
