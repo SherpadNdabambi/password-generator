@@ -16,7 +16,7 @@
     <!--Open Graph tags-->
     <meta property="og:title" content="Password Generator" />
     <meta property="og:description" content="A random password generator." />
-    <meta property="og:image" content="img/og-image.jpg" />
+    <meta property="og:image" content="./assets/img/og-image.jpg" />
 
     <!--Twitter cards-->
     <meta name="twitter:title" content="Password Generator" />
@@ -26,12 +26,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <!--scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
-    <script src="./js/includeLocal.js"></script>
+    <script src="./dist/includeLocal.js"></script>
     <script defer>
       window.bootstrap ||
         (includeLocalCSS("bootstrap.min.css") &&
@@ -40,17 +40,20 @@
     <script defer>
       window.Popper || includeLocalJS("popper.min.js");
     </script>
-    <!-- data-main attribute tells require.js to load ./js/series.js after require.js loads. -->
-    <script data-main="./js/scripts" src="./js/vendor/require.js"></script>
+    <!-- data-main attribute tells require.js to load ./dist/scripts.js after require.js loads. -->
+    <script
+      data-main="./dist/scripts.js"
+      src="./assets/js/vendor/require.js"
+    ></script>
   </head>
 
   <body>
-    <main class="container h-auto m-0 min-vh-100">
+    <main class="container-fluid h-auto m-0 min-vh-100">
       <h1 class="text-center">Password Generator</h1>
 
       <p class="mb-5 text-center">Generate random passwords.</p>
 
-      <div>
+      <form>
         <div class="num-characters">
           <div class="input-group mb-2">
             <span class="input-group-text">Minimum no. of characters</span>
@@ -138,7 +141,7 @@
           </button>
         </div>
 
-        <div class="row justify-content-center mb-3">
+        <div class="row justify-content-center mb-3 output">
           <div class="input-group w-75">
             <input class="form-control" disabled id="password" type="text" />
             <button class="btn btn-info" onclick="copyPassword();">Copy</button>
@@ -146,7 +149,7 @@
         </div>
 
         <div class="alert text-center" id="confirmation" role="alert"></div>
-      </div>
+      </form>
 
       <!-- Copyright -->
       <div
