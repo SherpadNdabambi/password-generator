@@ -7,8 +7,5 @@
     "target": "es2017"
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["./assets/ts"],
-  "scripts": {
-    "build": "tsc"
-  }
+  "include": ["./assets/ts"]
 }
