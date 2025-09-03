@@ -32,6 +32,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          git add -f .
+          git add .
+          git add -f dist
           git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
           git push origin HEAD:gh-pages --force
